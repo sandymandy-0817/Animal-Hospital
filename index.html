@@ -19,7 +19,23 @@
     <!--폰트-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">\
+
+    <!--접속한 사용자의 디바이스 종류에 따라서 pc index가 열릴지, 모바일 index.html이 열릴지 결정해 주는 js작성-->
+    <script>
+        let mobile_keys = new Array('iPhone', 'iPad', 'Android', 'BlackBerry', 'Window CE', 'Window Phone', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson', 'Nokia');
+
+        //모바일 사용자가 pc버전보기를 클릭시 move_pc_screen문자 주소 뒤에 붙은 경우에 스크립트를 동작안하게 할 수 있다
+        if(document.URL.match('move_pc_screen')) mobile_keys=null;
+
+        for(i in mobile_keys) { //in키워드: 키값이 일치한다면 true값을 반환, 없으면 false
+            if(navigator.userAgent.match(mobile_keys[i])!=null) {
+                location.href='http://sandymandy-0817.github.io/Animal-Hospital/m/index.html';
+                break;
+            }
+        }
+
+    </script>
 </head>
 <body>
     <header>
