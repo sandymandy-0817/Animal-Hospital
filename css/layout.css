@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+header {
+    width: 100%;
+    position: relative;
+    z-index: 10000;
+}
+
+.h_inner {
+    height: 110px;
+    background-color: #4e4e5f;
+}
+
+.h_top {
+    width: 1025px; /*실제 홈페이지의 크기*/
+    margin: 0 auto;
+    height: 30px;
+}
+
+.h_bottom {
+    width: 1025px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.c_wrap{
+    width:1025px;
+    margin:15px auto;
+    display:flex; /* 자식요소를 가로방향으로 배치 */
+    justify-content: space-between;
+}
+
+.c01{
+    width:340px;
+}
+
+.c02{
+    width:380px;
+}
+
+.c03{
+    width:260px;
+}
